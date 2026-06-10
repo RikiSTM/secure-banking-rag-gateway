@@ -1,0 +1,26 @@
+# ==========================================
+# Custom MLOps & Data Engineering Exclusions
+# ==========================================
+
+# Ignore raw and processed datasets to prevent pushing large files to GitHub
+# The .gitkeep files ensure the directory structure remains intact
+data/raw/*
+data/processed/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# Ignore trained models, weights, and ONNX exports
+models/*
+*.onnx
+*.pt
+*.bin
+*.h5
+!models/.gitkeep
+
+# Ignore Jupyter Notebook checkpoints and cache
+.ipynb_checkpoints/
+jupyter_execute/
+
+# Ignore environment variables and secrets (Strict Security)
+.env
+.env.*
